@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP 11.10.25</title>
+    <style>
+        body {
+            font-family: monospace, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ddd;
+            background-color:black;
+        }
+        header {
+            padding: 10px;
+            padding-bottom: 0;
+        }
+        nav {
+            margin: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 10px;
+            padding-top: 0;
+            font-size: 1.8em;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const today = new Date();
+            const eventDateString = "11.10.2025";
+            const eventDate = new Date(eventDateString.split('.').reverse().join('-'));
+            const isToday = today.toDateString() === eventDate.toDateString();
+            document.getElementById("event-status").textContent = isToday ? "YES" : "no";
+        });
+    </script>
+</head>
+<body>
+    <header>
+            <pre>░▒▓█▓▒░▒▓███████▓▒░          ░▒▓█▓▒░  ░▒▓█▓▒░      ░▒▓█▓▒░▒▓████████▓▒░      ░▒▓███████▓▒░░▒▓████████▓▒░
+░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓████▓▒░▒▓████▓▒░   ░▒▓████▓▒░▒▓█▓▒░░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░
+░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░         ░▒▓█▓▒░  ░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░
+░▒▓█▓▒░▒▓███████▓▒░          ░▒▓█▓▒░  ░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░       ░▒▓██████▓▒░░▒▓███████▓▒░
+░▒▓█▓▒░▒▓█▓▒░                ░▒▓█▓▒░  ░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░             ░▒▓█▓▒░
+░▒▓█▓▒░▒▓█▓▒░                ░▒▓█▓▒░  ░▒▓█▓▒░▒▓██▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓██▓▒░▒▓█▓▒░             ░▒▓█▓▒░
+░▒▓█▓▒░▒▓█▓▒░                ░▒▓█▓▒░  ░▒▓█▓▒░▒▓██▓▒░▒▓█▓▒░▒▓████████▓▒░▒▓██▓▒░▒▓████████▓▒░▒▓███████▓▒░
+        </pre>
+    </header>
+    <main>
+        <section id="activities">
+            <h2>Program</h2>
+            <ul>
+                <li><strong>Perttu Lindroos LIVE</strong></li>
+                <li>B2B Open Decks (vinyl & digital)</li>
+            </ul>
+        </section>
+        <section id="info">
+            <h2>Info</h2>
+            <ul>
+                <li>Operations: 15:00 - 00:00</li>
+                <li>Location: Bunker Viiskulma</li>
+                <li>byob</li>
+            </ul>
+        </section>
+
+        <section class="hide">
+            <h2>Is it today?</h2>
+            <ul><li><span id="event-status">no</span></li></ul>
+        </section>
+</html>
